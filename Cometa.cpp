@@ -21,6 +21,7 @@ double Cometa::perimetro() {
 
 void Cometa::dibujar()
 {
+	setlocale(LC_ALL, "Spanish");
 	string fullPath = "C:/Users/carlo/Desktop/Proyecto1P3/Proyecto1P3_CarlosFlores_DanielElvir/cometa.txt";
 
 	ifstream file(fullPath);

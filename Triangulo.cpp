@@ -22,6 +22,8 @@ double Triangulo::perimetro() {
 
 void Triangulo::dibujar()
 {
+
+	setlocale(LC_ALL, "Spanish");
 	string fullPath = "C:/Users/carlo/Desktop/Proyecto1P3/Proyecto1P3_CarlosFlores_DanielElvir/triangulo.txt";
 
 	ifstream file(fullPath);

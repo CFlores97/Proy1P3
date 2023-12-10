@@ -20,6 +20,7 @@ double Paralelogramo::perimetro() {
 
 void Paralelogramo::dibujar()
 {
+	setlocale(LC_ALL, "Spanish");
 	string fullPath = "C:/Users/carlo/Desktop/Proyecto1P3/Proyecto1P3_CarlosFlores_DanielElvir/paralelogramo.txt";
 
 	ifstream file(fullPath);

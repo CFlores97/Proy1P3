@@ -1,7 +1,8 @@
-#include "Circulo.h"
+﻿#include "Circulo.h"
 
 #include <cmath>
 #include <iomanip>
+#include <locale.h>
 
 
 Circulo::Circulo(int r) {
@@ -21,6 +22,7 @@ double Circulo::perimetro() {
 }
 
 void Circulo::dibujar() {
+	setlocale(LC_CTYPE, "Spanish");
 
 	string fullPath = "C:/Users/carlo/Desktop/Proyecto1P3/Proyecto1P3_CarlosFlores_DanielElvir/circulo.txt";
 
@@ -32,11 +34,36 @@ void Circulo::dibujar() {
 
 	string line;
 
-	while (getline(file, line)) {
-		cout << line << endl;
+	stringstream buffer;
+	buffer << file.rdbuf();
+	line = buffer.str();
+	file.close();
+
+
+	size_t pos = line.find("[{r}]");
+
+	while (pos != string::npos) {
+		line.replace(pos, 5, to_string(r) + "    ");
+		pos = line.find("[{r}]", pos + to_string(r).length());
 	}
 
-	file.close();
+	size_t pos2 = line.find("{r}");
+
+	while (pos2 != string::npos) {
+		line.replace(pos2, 3, to_string(r) + "  ");
+		pos2 = line.find("{r}", pos2 + to_string(r).length());
+	}
+
+
+	size_t pos3 = line.find("[{2 * pi * r}]");
+	while (pos3 != string::npos) { //npos significa que no encontro el caracter, por eso es "!= npos"
+		line.replace(pos3, 14, to_string((int)area()) + "	    "); //el "14" es el length de lo que vas a reemplazar ej: "[{2 * pi * r}]"
+		pos3 = line.find("[{2 * pi * r}]", pos3 + to_string((int)area()).length());
+	}
+
+
+	cout << line << endl;
+	
 }
 
 

@@ -19,6 +19,7 @@ double Rectangulo::perimetro() {
 
 void Rectangulo::dibujar()
 {
+	setlocale(LC_ALL, "Spanish");
 	string fullPath = "C:/Users/carlo/Desktop/Proyecto1P3/Proyecto1P3_CarlosFlores_DanielElvir/rectangulo.txt";
 
 	ifstream file(fullPath);
