@@ -131,6 +131,7 @@
     <ClCompile Include="Cometa.cpp" />
     <ClCompile Include="Cuadrado.cpp" />
     <ClCompile Include="Figura.cpp" />
+    <ClCompile Include="Funciones.cpp" />
     <ClCompile Include="Paralelogramo.cpp" />
     <ClCompile Include="Proyecto1P3_CarlosFlores_DanielElvir.cpp" />
     <ClCompile Include="Rectangulo.cpp" />
@@ -143,6 +144,7 @@
     <ClInclude Include="Cometa.h" />
     <ClInclude Include="Cuadrado.h" />
     <ClInclude Include="Figura.h" />
+    <ClInclude Include="Funciones.h" />
     <ClInclude Include="Paralelogramo.h" />
     <ClInclude Include="Rectangulo.h" />
     <ClInclude Include="Rombo.h" />

@@ -1,11 +1,11 @@
 #pragma once
 #include "Figura.h"
-class Cometa
+class Cometa : public Figura
 {
-
+	int a, b, d, D;
 public:
-	Triangulo(int, int, int, int);
-	~Triangulo();
+	Cometa(int, int, int, int);
+	~Cometa();
 
 	//polimorfos
 	virtual double area() override;
@@ -15,13 +15,13 @@ public:
 	//getters
 	int getA();
 	int getB();
-	int getC();
-	int getH();
+	int getD();
+	int getDMayus();
 
 	//setters
 	void setA(int);
 	void setB(int);
-	void setC(int);
-	void setH(int);
+	void setD(int);
+	void setDMayus(int);
 };
 

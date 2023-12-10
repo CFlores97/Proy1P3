@@ -1,9 +1,16 @@
 
 #include <iostream>
+#include "Funciones.h"
 using namespace std;
 
-int main()
+
+
+int main(int argc, char* argv[])
 {
-    cout << "Hello World!\n";
+
+    //cout << argc << endl;
+    Funciones::accion(argc, argv);
+
+    
 }
 
