@@ -3,7 +3,8 @@
 void Funciones::readTxt(string fileName)
 {
 
-	string fullPath = "C:/Users/carlo/Desktop/Proyecto1P3/Proyecto1P3_CarlosFlores_DanielElvir/" + fileName + ".txt";
+	//string fullPath = "C:/Users/carlo/Desktop/Proyecto1P3/Proyecto1P3_CarlosFlores_DanielElvir/" + fileName + ".txt";
+	string fullPath = "C:\\Users\\HP\\Documents\\Documentos Unitec\\Programacion 3\\Programas Progra 3\\Proy1P3\\" + fileName + ".txt";
 
 	ifstream file(fullPath);
 
