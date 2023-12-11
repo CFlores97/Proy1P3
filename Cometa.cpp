@@ -21,9 +21,9 @@ double Cometa::perimetro() {
 
 void Cometa::dibujar()
 {
-	setlocale(LC_ALL, "Spanish");
-	//string fullPath = "C:/Users/carlo/Desktop/Proyecto1P3/Proyecto1P3_CarlosFlores_DanielElvir/cometa.txt";
-	string fullPath = "\"C:/Users/HP/Documents/Documentos Unitec/Programacion 3/Programas Progra 3/Proy1P3/cometa.txt\"";
+	
+	string fullPath = "C:/Users/carlo/Desktop/Proyecto1P3/Proyecto1P3_CarlosFlores_DanielElvir/cometa.txt";
+	//string fullPath = "\"C:/Users/HP/Documents/Documentos Unitec/Programacion 3/Programas Progra 3/Proy1P3/cometa.txt\"";
 
 	ifstream file(fullPath);
 
@@ -97,13 +97,13 @@ void Cometa::dibujar()
 
 	size_t pos9 = line.find("[{a+b}]");
 	while (pos9 != string::npos) { //npos significa que no encontro el caracter, por eso es "!= npos"
-		line.replace(pos9, 7, to_string(a+b) + "	    "); //el "14" es el length de lo que vas a reemplazar ej: "[{2 * pi * r}]"
+		line.replace(pos9, 7, to_string(a+b) + "      "); //el "14" es el length de lo que vas a reemplazar ej: "[{2 * pi * r}]"
 		pos9 = line.find("[{a+b}]", pos9 + to_string(a+b).length());
 	}
 
 	size_t pos10 = line.find("[{2*a+b}]");
 	while (pos10 != string::npos) { //npos significa que no encontro el caracter, por eso es "!= npos"
-		line.replace(pos10, 9, to_string((int)perimetro()) + "	    "); //el "14" es el length de lo que vas a reemplazar ej: "[{2 * pi * r}]"
+		line.replace(pos10, 9, to_string((int)perimetro()) + "	      "); //el "14" es el length de lo que vas a reemplazar ej: "[{2 * pi * r}]"
 		pos10 = line.find("[{2*a+b}]", pos10 + to_string((int)perimetro()).length());
 	}
 
@@ -115,7 +115,7 @@ void Cometa::dibujar()
 
 	size_t pos12 = line.find("[{(D * d)/2}]");
 	while (pos12 != string::npos) { //npos significa que no encontro el caracter, por eso es "!= npos"
-		line.replace(pos12, 13, to_string((int)area()) + "	    "); //el "14" es el length de lo que vas a reemplazar ej: "[{2 * pi * r}]"
+		line.replace(pos12, 13, to_string((int)area()) + "	      "); //el "14" es el length de lo que vas a reemplazar ej: "[{2 * pi * r}]"
 		pos12 = line.find("[{(D * d)/2}]", pos12 + to_string((int)area()).length());
 	}
 

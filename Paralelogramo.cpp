@@ -20,9 +20,9 @@ double Paralelogramo::perimetro() {
 
 void Paralelogramo::dibujar()
 {
-	setlocale(LC_ALL, "Spanish");
-	//string fullPath = "C:/Users/carlo/Desktop/Proyecto1P3/Proyecto1P3_CarlosFlores_DanielElvir/paralelogramo.txt";
-	string fullPath = "\"C:/Users/HP/Documents/Documentos Unitec/Programacion 3/Programas Progra 3/Proy1P3/paralelogramo.txt\"";
+	
+	string fullPath = "C:/Users/carlo/Desktop/Proyecto1P3/Proyecto1P3_CarlosFlores_DanielElvir/paralelogramo.txt";
+	//string fullPath = "\"C:/Users/HP/Documents/Documentos Unitec/Programacion 3/Programas Progra 3/Proy1P3/paralelogramo.txt\"";
 
 	ifstream file(fullPath);
 
@@ -82,19 +82,19 @@ void Paralelogramo::dibujar()
 
 	size_t pos6 = line.find("[{a+b}]");
 	while (pos6 != string::npos) { //npos significa que no encontro el caracter, por eso es "!= npos"
-		line.replace(pos6, 7, to_string(a+b) + "	    "); //el "14" es el length de lo que vas a reemplazar ej: "[{2 * pi * r}]"
+		line.replace(pos6, 7, to_string(a+b) + "	  "); //el "14" es el length de lo que vas a reemplazar ej: "[{2 * pi * r}]"
 		pos6 = line.find("[{a+b}]", pos6 + to_string((a+b)).length());
 	}
 
 	size_t pos7 = line.find("[{2*a+b}]");
 	while (pos7 != string::npos) { //npos significa que no encontro el caracter, por eso es "!= npos"
-		line.replace(pos7, 9, to_string((int)perimetro()) + "	    "); //el "14" es el length de lo que vas a reemplazar ej: "[{2 * pi * r}]"
+		line.replace(pos7, 9, to_string((int)perimetro()) + "	  "); //el "14" es el length de lo que vas a reemplazar ej: "[{2 * pi * r}]"
 		pos7 = line.find("[{2*a+b}]", pos7 + to_string((int)perimetro()).length());
 	}
 
 	size_t pos8 = line.find("[{b*h}]");
 	while (pos8 != string::npos) { //npos significa que no encontro el caracter, por eso es "!= npos"
-		line.replace(pos8, 7, to_string((int)area()) + "	    "); //el "14" es el length de lo que vas a reemplazar ej: "[{2 * pi * r}]"
+		line.replace(pos8, 7, to_string((int)area()) + "	 "); //el "14" es el length de lo que vas a reemplazar ej: "[{2 * pi * r}]"
 		pos8 = line.find("[{b*h}]", pos8 + to_string((int)area()).length());
 	}
 

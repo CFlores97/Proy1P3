@@ -1,10 +1,11 @@
 #include "Funciones.h"
+#include <windows.h>
 
 void Funciones::readTxt(string fileName)
 {
-
-	//string fullPath = "C:/Users/carlo/Desktop/Proyecto1P3/Proyecto1P3_CarlosFlores_DanielElvir/" + fileName + ".txt";
-	string fullPath = "C:\\Users\\HP\\Documents\\Documentos Unitec\\Programacion 3\\Programas Progra 3\\Proy1P3\\" + fileName + ".txt";
+	
+	string fullPath = "C:/Users/carlo/Desktop/Proyecto1P3/Proyecto1P3_CarlosFlores_DanielElvir/" + fileName + ".txt";
+	//string fullPath = "C:\\Users\\HP\\Documents\\Documentos Unitec\\Programacion 3\\Programas Progra 3\\Proy1P3\\" + fileName + ".txt";
 
 	ifstream file(fullPath);
 
@@ -26,14 +27,15 @@ void Funciones::accion(int argc, char* argv[])
 {
 	Circulo* circ;
 	Triangulo* tri;
-
-
 	Cometa* com;
 	Cuadrado* cuad;
 	Paralelogramo* par;
 	Rectangulo* rec;
 	Rombo* rom;
 	Trapecio* trap;
+
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 
 	
 	if (argc == 1) {

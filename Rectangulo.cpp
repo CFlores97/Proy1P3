@@ -19,9 +19,9 @@ double Rectangulo::perimetro() {
 
 void Rectangulo::dibujar()
 {
-	setlocale(LC_ALL, "Spanish");
-	//string fullPath = "C:/Users/carlo/Desktop/Proyecto1P3/Proyecto1P3_CarlosFlores_DanielElvir/rectangulo.txt";
-	string fullPath = "\"C:/Users/HP/Documents/Documentos Unitec/Programacion 3/Programas Progra 3/Proy1P3/rectangulo.txt\"";
+	
+	string fullPath = "C:/Users/carlo/Desktop/Proyecto1P3/Proyecto1P3_CarlosFlores_DanielElvir/rectangulo.txt";
+	//string fullPath = "\"C:/Users/HP/Documents/Documentos Unitec/Programacion 3/Programas Progra 3/Proy1P3/rectangulo.txt\"";
 
 	ifstream file(fullPath);
 
@@ -73,13 +73,13 @@ void Rectangulo::dibujar()
 
 	size_t pos6 = line.find("[{2*a+b}]");
 	while (pos6 != string::npos) { //npos significa que no encontro el caracter, por eso es "!= npos"
-		line.replace(pos6, 9, to_string((int)perimetro()) + "	    "); //el "14" es el length de lo que vas a reemplazar ej: "[{2 * pi * r}]"
+		line.replace(pos6, 9, to_string((int)perimetro()) + "	   "); //el "14" es el length de lo que vas a reemplazar ej: "[{2 * pi * r}]"
 		pos6 = line.find("[{a*a}]", pos6 + to_string((int)perimetro()).length());
 	}
 
 	size_t pos7 = line.find("[{b*a}]");
 	while (pos7 != string::npos) { //npos significa que no encontro el caracter, por eso es "!= npos"
-		line.replace(pos7, 9, to_string((int)area()) + "	    "); //el "14" es el length de lo que vas a reemplazar ej: "[{2 * pi * r}]"
+		line.replace(pos7, 9, to_string((int)area()) + "	  "); //el "14" es el length de lo que vas a reemplazar ej: "[{2 * pi * r}]"
 		pos7 = line.find("[{a*a}]", pos7 + to_string((int)area()).length());
 	}
 

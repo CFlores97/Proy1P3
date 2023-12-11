@@ -20,9 +20,9 @@ double Rombo::perimetro() {
 
 void Rombo::dibujar()
 {
-	setlocale(LC_ALL, "Spanish");
-	//string fullPath = "C:/Users/carlo/Desktop/Proyecto1P3/Proyecto1P3_CarlosFlores_DanielElvir/rombo.txt";
-	string fullPath = "\"C:/Users/HP/Documents/Documentos Unitec/Programacion 3/Programas Progra 3/Proy1P3/rombo.txt\"";
+	
+	string fullPath = "C:/Users/carlo/Desktop/Proyecto1P3/Proyecto1P3_CarlosFlores_DanielElvir/rombo.txt";
+	//string fullPath = "\"C:/Users/HP/Documents/Documentos Unitec/Programacion 3/Programas Progra 3/Proy1P3/rombo.txt\"";
 
 	ifstream file(fullPath);
 
@@ -82,13 +82,13 @@ void Rombo::dibujar()
 
 	size_t pos7 = line.find("[{4 * a}]");
 	while (pos7 != string::npos) { //npos significa que no encontro el caracter, por eso es "!= npos"
-		line.replace(pos7, 9, to_string((int)perimetro()) + "	    "); //el "14" es el length de lo que vas a reemplazar ej: "[{2 * pi * r}]"
+		line.replace(pos7, 9, to_string((int)perimetro()) + "	   "); //el "14" es el length de lo que vas a reemplazar ej: "[{2 * pi * r}]"
 		pos7 = line.find("[{4 * a}]", pos7 + to_string((int)perimetro()).length());
 	}
 
 	size_t pos8 = line.find("[{D * d}]");
 	while (pos8 != string::npos) { //npos significa que no encontro el caracter, por eso es "!= npos"
-		line.replace(pos8, 9, to_string(D*d) + "	    "); //el "14" es el length de lo que vas a reemplazar ej: "[{2 * pi * r}]"
+		line.replace(pos8, 9, to_string(D*d) + "	  "); //el "14" es el length de lo que vas a reemplazar ej: "[{2 * pi * r}]"
 		pos8 = line.find("[{D * d}]", pos8 + to_string(D*d).length());
 	}
 

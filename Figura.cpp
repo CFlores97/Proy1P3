@@ -1,5 +1,6 @@
 #include "Figura.h"
 
+
 double Figura::area()
 {
     return 0.0;

@@ -23,9 +23,9 @@ double Trapecio::perimetro() {
 
 void Trapecio::dibujar()
 {
-	setlocale(LC_ALL, "Spanish");
-	//string fullPath = "C:/Users/carlo/Desktop/Proyecto1P3/Proyecto1P3_CarlosFlores_DanielElvir/trapecio.txt";
-	string fullPath = "\"C:/Users/HP/Documents/Documentos Unitec/Programacion 3/Programas Progra 3/Proy1P3/trapecio.txt\"";
+	
+	string fullPath = "C:/Users/carlo/Desktop/Proyecto1P3/Proyecto1P3_CarlosFlores_DanielElvir/trapecio.txt";
+	//string fullPath = "\"C:/Users/HP/Documents/Documentos Unitec/Programacion 3/Programas Progra 3/Proy1P3/trapecio.txt\"";
 
 	ifstream file(fullPath);
 
@@ -113,7 +113,7 @@ void Trapecio::dibujar()
 
 	size_t pos11 = line.find("[{B + b + a + c}]");
 	while (pos11 != string::npos) { //npos significa que no encontro el caracter, por eso es "!= npos"
-		line.replace(pos11, 17, to_string((int)perimetro()) + "	    "); //el "14" es el length de lo que vas a reemplazar ej: "[{2 * pi * r}]"
+		line.replace(pos11, 17, to_string((int)perimetro()) + "               "); //el "14" es el length de lo que vas a reemplazar ej: "[{2 * pi * r}]"
 		pos11 = line.find("[{B + b + a + c}]", pos11 + to_string((int)perimetro()).length());
 	}
 
@@ -125,9 +125,11 @@ void Trapecio::dibujar()
 
 	size_t pos13 = line.find("[{((B+b)*h)/2}]");
 	while (pos13 != string::npos) { //npos significa que no encontro el caracter, por eso es "!= npos"
-		line.replace(pos13, 15, to_string((int)area()) + "	    "); //el "14" es el length de lo que vas a reemplazar ej: "[{2 * pi * r}]"
+		line.replace(pos13, 15, to_string((int)area()) + "	           "); //el "14" es el length de lo que vas a reemplazar ej: "[{2 * pi * r}]"
 		pos13 = line.find("[{((B+b)*h)/2}]", pos13 + to_string((int)area()).length());
 	}
+
+	cout << line << endl;
 }
 
 int Trapecio::getA() {
